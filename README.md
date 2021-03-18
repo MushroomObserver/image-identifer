@@ -1,10 +1,6 @@
-# image-identifer
-
-Tools for doing image-based mushroom identification
-
-
-- - - 
-
+### *Tools for doing image-based mushroom identification*
+- [**@github.com**](https://github.com/Jesssullivan/image-identifer) <br>
+- [**@github.io**](https://jesssullivan.github.io/image-identifer/) <br>
 
 ***Overview:***
 - [**Setup**](#setup) <br>
