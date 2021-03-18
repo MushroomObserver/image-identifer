@@ -9,7 +9,7 @@ Tools for doing image-based mushroom identification
 ***Overview:***
 - [**Setup**](#setup) <br>
 - [**Artifacts**](#artifacts) <br>
-- [**Preprocess**](#Preprocess) <br>
+- [**Preprocess**](#preprocess) <br>
 - [**Artifacts**](#artifacts) <br>
 - [**Train**](#train) <br>
 - [**Structures**](#structures) <br>
@@ -76,7 +76,8 @@ python3 train
 
 ***Google Colab:***
 
-- [@gvanhorn38](https://github.com/gvanhorn38/) pointed out Google Colabs's neat Juptyer notebook service will train models for free if things are small enough- I have no idea what the limits are- fiddle with their [***intro to image classification on Google Colab here***](https://colab.research.google.com/github/tensorflow/docs/blob/master/site/en/tutorials/images/classification.ipynb), its super cool!  Added more or less verbatim MO version of this to [./train/training_v1](./train/training_v1.ipynb) as well.  
+- [@gvanhorn38](https://github.com/gvanhorn38/) pointed out Google Colabs's neat Juptyer notebook service will train models for free if things are small enough- I have no idea what the limits are- fiddle with their [***intro to image classification on Google Colab here***](https://colab.research.google.com/github/tensorflow/docs/blob/master/site/en/tutorials/images/classification.ipynb), its super cool!
+
 
 ***Jupyter:***
 
