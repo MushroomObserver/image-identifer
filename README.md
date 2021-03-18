@@ -150,6 +150,10 @@ python3 train
 #### *Notes:*
 
 
+*...Progress:*
+|![](https://www.transscendsurvival.org/wp-content/uploads/2021/03/f1-281x300.png)|![](https://www.transscendsurvival.org/wp-content/uploads/2021/03/f2-300x151.png)|
+|---|---|
+
 
 *Fiddling with the archive:*
 - `MODwca.gbif[1].id`: Integer:  This is the Mushroom Observer taxon id, e.g.
