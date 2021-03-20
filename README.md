@@ -55,7 +55,7 @@ python3 preprocess
 
 - Fetches & saves off gbif archive to `./static/`
   - Checks the archive, tries loading it into memory etc
-- Fetches Leaflet Annotator binary & licenses from [JessSullivan/MerlinAI-Interpreters](https://github.com/Jesssullivan/MerlinAI-Interpreters);  Need to commit annotator *(as of 03/16/21)*, still fussing with a version for Mushroom Observer  
+- Fetches Leaflet Annotator binary & licenses from [JessSullivan/MerlinAI-Interpreters](https://github.com/Jesssullivan/MerlinAI-Interpreters)
 - Generates an `images.json` annotation file from the 500 assets selected by Joe & Nathan
 - Generates an `categories.json` file from the 36 annotatable classes selected by Joe & Nathan
 - Downloads, organizes the 500 selected assets from *images.mushroomoberver.org* at `./static/images/<category>/<id>.jpg`
