@@ -4,10 +4,7 @@ mushroomobserver_venv
 **/__pycache__
 **/.DS_Store
 .idea
-**/*.zip
-**/*.tgz
 
-static/images.json
 static/js/*
 static/images/*
 

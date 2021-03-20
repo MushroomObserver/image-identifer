@@ -1,6 +1,7 @@
 ### *Tools for doing image-based mushroom identification*
 - [**@github.com**](https://github.com/Jesssullivan/image-identifer) <br>
 - [**@github.io**](https://jesssullivan.github.io/image-identifer/) <br>
+- [**Visit the web annotator demo:**](https://ai.columbari.us/annotator/photo) <br>
 
 ***Overview:***
 - [**Setup**](#setup) <br>
@@ -37,7 +38,7 @@ pip3 install -r requirements.txt
 |[*images.tgz*](https://mo.columbari.us/static/images.tgz) |[*images.json*](https://mo.columbari.us/static/images.json)|[*gbif.zip*](https://mo.columbari.us/static/gbif.zip)|
 
 
-- - - 
+- - -
 
 
 <h4 id="preprocess"> </h4>
@@ -52,7 +53,8 @@ python3 preprocess
 - Fetches & saves off gbif archive to `./static/`
   - Checks the archive, tries loading it into memory etc
 - Fetches Leaflet Annotator binary & licenses from [JessSullivan/MerlinAI-Interpreters](https://github.com/Jesssullivan/MerlinAI-Interpreters);  Need to commit annotator *(as of 03/16/21)*, still fussing with a version for Mushroom Observer  
-- Generates an `images.json` file from the 500 assets selected by Joe & Nathan
+- Generates an `images.json` annotation file from the 500 assets selected by Joe & Nathan
+- Generates an `categories.json` file from the 36 annotatable classes selected by Joe & Nathan
 - Downloads, organizes the 500 selected assets from *images.mushroomoberver.org* at `./static/images/<category>/<id>.jpg`
   - writes out images archive
 - More or less randomly divvies up testing & training image sets
