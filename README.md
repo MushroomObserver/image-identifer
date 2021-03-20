@@ -1,7 +1,8 @@
 ### *Tools for doing image-based mushroom identification*
 - [**@github.com**](https://github.com/Jesssullivan/image-identifer) <br>
 - [**@github.io**](https://jesssullivan.github.io/image-identifer/) <br>
-- [**Visit the web annotator demo:**](https://ai.columbari.us/annotator/photo) <br>
+- [**Web Annotator @ ai.columbari.us**](https://ai.columbari.us/annotator/photo) <br>
+
 
 ***Overview:***
 - [**Setup**](#setup) <br>
@@ -33,9 +34,11 @@ pip3 install -r requirements.txt
 <h4 id="artifacts"> </h4>
 
 
-|***Artifacts:***|[*train.tgz*](https://mo.columbari.us/static/train.tgz)|[*test.tgz*](https://mo.columbari.us/static/test.tgz)|
+### *Artifacts:*
+
+|[*images.tgz*](https://mo.columbari.us/static/images.tgz)|[*train.tgz*](https://mo.columbari.us/static/train.tgz)|[*test.tgz*](https://mo.columbari.us/static/test.tgz)|
 |---|---|---|
-|[*images.tgz*](https://mo.columbari.us/static/images.tgz) |[*images.json*](https://mo.columbari.us/static/images.json)|[*gbif.zip*](https://mo.columbari.us/static/gbif.zip)|
+|[*images.json*](https://mo.columbari.us/static/images.json)|[*categories.json*](https://mo.columbari.us/static/categories.json)|[*config.json*](https://mo.columbari.us/static/config.json)|
 
 
 - - -
