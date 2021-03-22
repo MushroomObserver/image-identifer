@@ -12,11 +12,15 @@ from shutil import copyfile
 from common import *
 
 
-class BuildImages:
+class Preprocess:
 
     def __init__(self,
                  _static_path=STATIC_PATH,
-                 _sample_assets_path=SAMPLE_ASSETS_PATH):
+                 _sample_assets_path=SAMPLE_ASSETS_PATH,
+                 _version=2):
+
+        # csv version :t  ...We should probably stick with just one for a while  xD
+        self.version = _version
 
         # common paths
         self.static_path = _static_path
@@ -33,27 +37,47 @@ class BuildImages:
             # open up Nathan and  Joe's merged csv files from Google Sheets:
             ln = csv.reader(f, delimiter=',', quotechar='|')
 
-            for row in ln:
-                try:
-                    # make sure we only adding integer keys:
-                    if int(row[0]):
+            if self.version == 1:
+                for row in ln:
+                    try:
+                        # make sure we only adding integer keys:
+                        if int(row[0]):
+                            _dir_name = str(row[1]).replace(" ", "_").lower()
 
-                        _dir_name = str(row[1]).replace(" ", "_").lower()
+                            _obj = {'id': str(row[2]).split('/')[-1],
+                                    'taxon_id': str(row[0]),
+                                    'category_id': str(row[1]),
+                                    'category_dir': _dir_name,
+                                    'url': 'https://mo.columbari.us/static/images/' + _dir_name + '/' +
+                                           str(row[2]).split('/')[-1],
+                                    'src': str(row[2])
+                                    }
 
-                        _obj = {'id': str(row[2]).split('/')[-1],
-                                'taxon_id': str(row[0]),
-                                'category_id': str(row[1]),
-                                'category_dir': _dir_name,
-                                'url': 'https://mo.columbari.us/static/images/' + _dir_name + '/' +
-                                       str(row[2]).split('/')[-1],
-                                'src': str(row[2])
-                                }
+                            self.json_df.append(_obj)
 
-                        self.json_df.append(_obj)
+                    except ValueError:
+                        # not an integer, skip it
+                        pass
 
-                except ValueError:
-                    # not an integer, skip it
-                    pass
+            if self.version == 2:
+                for row in ln:
+                    try:
+                        # make sure we only adding integer keys:
+                        if int(row[1]):
+                            _dir_name = str(row[0]).replace(" ", "_").lower()
+                            _obj = {'id': row[1],
+                                    'taxon_id': str(row[0]),
+                                    'category_id': str(row[0]),
+                                    'category_dir': _dir_name,
+                                    'url': 'https://mo.columbari.us/static/images/' +_dir_name + "/" + str(row[1]) + ".jpg",
+                                    'src': JPG_URL_PREFIX + str(row[1]) + ".jpg"
+                                    }
+
+                            self.json_df.append(_obj)
+
+                    except ValueError:
+                        # not an integer, skip it
+                        pass
 
     def fetch_leaflet_tool(self):
 
@@ -222,12 +246,12 @@ class BuildImages:
             _len = len(_tmp_df)
 
             obj = {
-                'id': _obj['taxon_id'],
+                'id': _obj['category_dir'],
                 'name': _obj['category_id'],
                 'supercategory': 'fungi'
             }
 
-            _tmp_df.add(_obj['taxon_id'])
+            _tmp_df.add(_obj['category_id'])
 
             if len(_tmp_df) > _len:
                 cats_df.append(obj)
@@ -244,4 +268,3 @@ class BuildImages:
         else:
 
             print("...Hmm, didn't write category.json, no fields found!")
-
