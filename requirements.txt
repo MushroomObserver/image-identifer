@@ -1,0 +1,12 @@
+python-dwca-reader
+# tensorflow
+tensorflow-cpu
+pandas
+bson
+tensorflow_hub
+matplotlib
+pillow
+waitress
+flask
+flask-cors
+jupyter

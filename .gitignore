@@ -1,5 +1,19 @@
+### image-identifier bits and bobs:
+mushroomobserver_venv
+**/*.pyc
+**/__pycache__
+**/.DS_Store
+.idea
+
+static/js/*
+static/images/*
+
+# temp:
+train/demo_*
+
+### - - - ###
+
 # Byte-compiled / optimized / DLL files
-__pycache__/
 *.py[cod]
 *$py.class
 
